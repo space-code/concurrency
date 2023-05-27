@@ -81,6 +81,17 @@ public protocol IDispatchQueue: AnyObject {
     /// - SeeAlso: `async(execute:)`
     ///
     func sync(execute block: () -> Void)
+
+    /// Schedules a work item for immediate execution, and returns immediately.
+    ///
+    /// - Parameter execute: The work item containing the task to execute.
+    /// For information on how to create this work item.
+    func async(execute workItem: DispatchWorkItem)
+
+    /// Submits a block for synchronous execution on this queue.
+    ///
+    /// - Parameter workItem: The work item to be invoked on the queue.
+    func sync(execute workItem: DispatchWorkItem)
 }
 
 public extension IDispatchQueue {

@@ -39,4 +39,12 @@ extension TestDispatchQueue: IDispatchQueue {
     public func async(execute work: @escaping @convention(block) () -> Void) {
         work()
     }
+
+    public func async(execute workItem: DispatchWorkItem) {
+        workItem.perform()
+    }
+
+    public func sync(execute workItem: DispatchWorkItem) {
+        workItem.perform()
+    }
 }
