@@ -92,6 +92,18 @@ public protocol IDispatchQueue: AnyObject {
     ///
     /// - Parameter workItem: The work item to be invoked on the queue.
     func sync(execute workItem: DispatchWorkItem)
+
+    ///
+    /// Submits a work item to a dispatch queue for asynchronous execution after
+    /// a specified time.
+    ///
+    /// - parameter: deadline the time after which the work item should be executed,
+    /// given as a `DispatchTime`.
+    /// - parameter execute: The work item to be invoked on the queue.
+    /// - SeeAlso: `asyncAfter(deadline:qos:flags:execute:)`
+    /// - SeeAlso: `DispatchTime`
+    ///
+    func asyncAfter(deadline: DispatchTime, execute: DispatchWorkItem)
 }
 
 public extension IDispatchQueue {

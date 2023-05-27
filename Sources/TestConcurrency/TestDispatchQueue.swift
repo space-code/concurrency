@@ -47,4 +47,8 @@ extension TestDispatchQueue: IDispatchQueue {
     public func sync(execute workItem: DispatchWorkItem) {
         workItem.perform()
     }
+
+    public func asyncAfter(deadline _: DispatchTime, execute: DispatchWorkItem) {
+        execute.perform()
+    }
 }
