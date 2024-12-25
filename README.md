@@ -55,7 +55,7 @@ testQueue.async {}
 ```
 
 ## Requirements
-- iOS 13.0+ / macOS 10.15+ / tvOS 11.0+ / watchOS 6.0+
+- iOS 13.0+ / macOS 10.15+ / tvOS 12.0+ / watchOS 6.0+
 - Xcode 14.0
 - Swift 5.5
 
@@ -68,7 +68,7 @@ Once you have your Swift package set up, adding `concurrency` as a dependency is
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/space-code/concurrency.git", .upToNextMajor(from: "0.0.1"))
+    .package(url: "https://github.com/space-code/concurrency.git", .upToNextMajor(from: "0.1.0"))
 ]
 ```
 
