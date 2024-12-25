@@ -85,7 +85,7 @@ public protocol IDispatchQueue: AnyObject {
     ///
     /// As an optimization, `sync(execute:)` invokes the work item on the thread which
     /// submitted it, except when the queue is the main queue or
-    /// a queue targetting it.
+    /// a queue targeting it.
     ///
     /// - parameter execute: The work item to be invoked on the queue.
     /// - SeeAlso: `async(execute:)`
