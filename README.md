@@ -55,7 +55,7 @@ testQueue.async {}
 ```
 
 ## Requirements
-- iOS 13.0+ / macOS 10.15+ / tvOS 12.0+ / watchOS 6.0+
+- iOS 13.0+ / macOS 10.15+ / tvOS 13.0+ / watchOS 6.0+
 - Xcode 14.0
 - Swift 5.5
 
