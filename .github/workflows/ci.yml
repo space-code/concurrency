@@ -34,9 +34,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - xcode: "Xcode_16.0"
+          - xcode: "Xcode_16.2"
             runsOn: macOS-14
-            name: "macOS 14, Xcode 16.0, Swift 6.0"
+            name: "macOS 14, Xcode 16.2, Swift 6.0"
           - xcode: "Xcode_15.4"
             runsOn: macOS-14
             name: "macOS 14, Xcode 15.4, Swift 5.10"
@@ -64,10 +64,6 @@ jobs:
           - destination: "OS=18.1,name=iPhone 16 Pro"
             name: "iOS 18.1"
             xcode: "Xcode_16.1"
-            runsOn: macOS-14
-          - destination: "OS=18.0,name=iPhone 16 Pro"
-            name: "iOS 18.0"
-            xcode: "Xcode_16.0"
             runsOn: macOS-14
           - destination: "OS=17.5,name=iPhone 15 Pro"
             name: "iOS 17.5"
@@ -100,10 +96,6 @@ jobs:
             name: "tvOS 18.1"
             xcode: "Xcode_16.1"
             runsOn: macOS-14
-          - destination: "OS=18.0,name=Apple TV"
-            name: "tvOS 18.0"
-            xcode: "Xcode_16.0"
-            runsOn: macOS-14
           - destination: "OS=17.5,name=Apple TV"
             name: "tvOS 17.5"
             xcode: "Xcode_15.4"
@@ -135,10 +127,6 @@ jobs:
             name: "watchOS 11.1"
             xcode: "Xcode_16.1"
             runsOn: macOS-14
-          - destination: "OS=11.0,name=Apple Watch Series 10 (46mm)"
-            name: "watchOS 11.0"
-            xcode: "Xcode_16.0"
-            runsOn: macOS-14
           - destination: "OS=10.5,name=Apple Watch Series 9 (45mm)"
             name: "watchOS 10.5"
             xcode: "Xcode_15.4"
@@ -168,9 +156,6 @@ jobs:
         include:
           - name: "macOS 14, SPM 6.0.2 Test"
             xcode: "Xcode_16.1"
-            runsOn: macOS-14
-          - name: "macOS 14, SPM 6.0.0 Test"
-            xcode: "Xcode_16.0"
             runsOn: macOS-14
           - name: "macOS 14, SPM 5.9.0 Test"
             xcode: "Xcode_15.0"

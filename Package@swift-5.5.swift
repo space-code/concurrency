@@ -9,7 +9,7 @@ let package = Package(
         .macOS(.v10_15),
         .iOS(.v13),
         .watchOS(.v6),
-        .tvOS(.v12),
+        .tvOS(.v13),
     ],
     products: [
         .library(name: "Concurrency", targets: ["Concurrency"]),
