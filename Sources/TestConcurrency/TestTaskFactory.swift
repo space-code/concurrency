@@ -15,7 +15,7 @@ import Foundation
         private let lock = NSLock()
         private var tasks: [ITask] = []
 
-        // MARK: Intialization
+        // MARK: Initialization
 
         public init() {}
 
