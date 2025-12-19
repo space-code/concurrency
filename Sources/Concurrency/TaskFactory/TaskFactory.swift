@@ -11,7 +11,6 @@
 
         // MARK: ITaskFactory
 
-        // swiftlint:disable attributes
         public func task<Success: Sendable>(
             priority: TaskPriority?,
             @_inheritActorContext operation: sending @escaping @isolated(any) () async throws -> Success
@@ -39,6 +38,5 @@
         ) -> Task<Success, Never> {
             Task.detached(priority: priority, operation: operation)
         }
-        // swiftlint:enable attributes
     }
 #endif

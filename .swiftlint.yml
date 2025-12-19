@@ -1,11 +1,6 @@
 excluded:
   - Tests
   - Package.swift
-  - Package@swift-5.5.swift
-  - Package@swift-5.6.swift
-  - Package@swift-5.7.swift
-  - Package@swift-5.8.swift
-  - Package@swift-5.9.swift
   - Package@swift-5.10.swift
   - .build
 

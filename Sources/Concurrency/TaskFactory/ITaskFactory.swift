@@ -9,7 +9,6 @@ import Foundation
 
     // MARK: - ITaskFactory
 
-    // swiftlint:disable attributes
     /// A protocol for creating and managing tasks with different configurations.
     /// Provides methods to create tasks tied to the current actor context or detached tasks
     /// that run independently of the current actor.
@@ -103,6 +102,4 @@ import Foundation
             detached(priority: nil, operation: operation)
         }
     }
-
-    // swiftlint:enable attributes
 #endif
