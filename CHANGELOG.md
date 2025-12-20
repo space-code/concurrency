@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 ## [Unreleased]
 
+### Documentation
+- Add a documentation
+  - Documented by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#20](https://github.com/space-code/concurrency/pull/20).
+
 ### Features
 - Switch from Makefile to Mise
   - Implemented by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#6](https://github.com/space-code/concurrency/pull/6).
@@ -20,6 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Implemented by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#17](https://github.com/space-code/concurrency/pull/17).
 
 ### Miscellaneous Tasks
+- Add GitHub issue and PR templates
+  - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#19](https://github.com/space-code/concurrency/pull/19).
 - Add conventional-pr.yml for PR validation
   - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#15](https://github.com/space-code/concurrency/pull/15).
 - Automate code formatting and linting with github actions
