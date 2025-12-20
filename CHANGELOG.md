@@ -24,6 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Implemented by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#17](https://github.com/space-code/concurrency/pull/17).
 
 ### Miscellaneous Tasks
+- Update logo
+  - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#22](https://github.com/space-code/concurrency/pull/22).
 - Add GitHub issue and PR templates
   - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#19](https://github.com/space-code/concurrency/pull/19).
 - Add conventional-pr.yml for PR validation
