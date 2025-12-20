@@ -1,4 +1,4 @@
-![concurrency: A collection of concurrency primitives](https://raw.githubusercontent.com/space-code/concurrency/dev/Resources/concurrency.png)
+![concurrency: A collection of concurrency primitives](./Resources/concurrency.png)
 
 <h1 align="center" style="margin-top: 0px;">concurrency</h1>
 
