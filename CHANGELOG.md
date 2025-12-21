@@ -14,6 +14,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 ## [Unreleased]
 
+### Miscellaneous Tasks
+- Add sortImports and sortSwitchCases rules
+  - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#24](https://github.com/space-code/concurrency/pull/24).
+
 ### Refactor
 - Mark methods with @discardableResult to silence unused result warnings
   - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#23](https://github.com/space-code/concurrency/pull/23).
