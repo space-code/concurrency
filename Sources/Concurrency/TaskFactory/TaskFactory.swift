@@ -11,6 +11,7 @@
 
         // MARK: ITaskFactory
 
+        @discardableResult
         public func task<Success: Sendable>(
             priority: TaskPriority?,
             @_inheritActorContext operation: sending @escaping @isolated(any) () async throws -> Success
@@ -18,6 +19,7 @@
             Task(priority: priority, operation: operation)
         }
 
+        @discardableResult
         public func task<Success: Sendable>(
             priority: TaskPriority?,
             @_inheritActorContext operation: sending @escaping @isolated(any) () async -> Success
@@ -25,6 +27,7 @@
             Task(priority: priority, operation: operation)
         }
 
+        @discardableResult
         public func detached<Success: Sendable>(
             priority: TaskPriority?,
             @_inheritActorContext operation: sending @escaping @isolated(any) () async throws -> Success
@@ -32,6 +35,7 @@
             Task.detached(priority: priority, operation: operation)
         }
 
+        @discardableResult
         public func detached<Success: Sendable>(
             priority: TaskPriority?,
             @_inheritActorContext operation: sending @escaping @isolated(any) () async -> Success

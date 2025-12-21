@@ -19,6 +19,7 @@ import Foundation
         ///   - operation: An asynchronous operation to execute within the task. The operation
         ///     inherits the current actor context and is isolated to that actor.
         /// - Returns: A `Task` object that wraps the result or error of the operation.
+        @discardableResult
         func task<Success: Sendable>(
             priority: TaskPriority?,
             @_inheritActorContext operation: sending @escaping @isolated(any) () async throws -> Success
@@ -30,6 +31,7 @@ import Foundation
         ///   - operation: An asynchronous operation to execute within the task. The operation
         ///     inherits the current actor context and is isolated to that actor.
         /// - Returns: A `Task` object that wraps the result of the operation.
+        @discardableResult
         func task<Success: Sendable>(
             priority: TaskPriority?,
             @_inheritActorContext operation: sending @escaping @isolated(any) () async -> Success
@@ -42,6 +44,7 @@ import Foundation
         ///   - operation: An asynchronous operation to execute within the task. The operation
         ///     is isolated and does not inherit the current actor context.
         /// - Returns: A `Task` object that wraps the result or error of the operation.
+        @discardableResult
         func detached<Success: Sendable>(
             priority: TaskPriority?,
             @_inheritActorContext operation: sending @escaping @isolated(any) () async throws -> Success
@@ -54,6 +57,7 @@ import Foundation
         ///   - operation: An asynchronous operation to execute within the task. The operation
         ///     is isolated and does not inherit the current actor context.
         /// - Returns: A `Task` object that wraps the result of the operation.
+        @discardableResult
         func detached<Success: Sendable>(
             priority: TaskPriority?,
             @_inheritActorContext operation: sending @escaping @isolated(any) () async -> Success
@@ -66,6 +70,7 @@ import Foundation
         /// that can throw errors.
         /// - Parameter operation: An asynchronous operation to execute within the task.
         /// - Returns: A `Task` object that wraps the result or error of the operation.
+        @discardableResult
         func task<Success: Sendable>(
             @_inheritActorContext operation: sending @escaping @isolated(any) () async throws -> Success
         ) -> Task<Success, Error> {
@@ -76,6 +81,7 @@ import Foundation
         /// that does not throw errors.
         /// - Parameter operation: An asynchronous operation to execute within the task.
         /// - Returns: A `Task` object that wraps the result of the operation.
+        @discardableResult
         func task<Success: Sendable>(
             @_inheritActorContext operation: sending @escaping @isolated(any) () async -> Success
         ) -> Task<Success, Never> {
@@ -86,6 +92,7 @@ import Foundation
         /// of the current actor context and can throw errors.
         /// - Parameter operation: An asynchronous operation to execute within the task.
         /// - Returns: A `Task` object that wraps the result or error of the operation.
+        @discardableResult
         func detached<Success: Sendable>(
             @_inheritActorContext operation: sending @escaping @isolated(any) () async throws -> Success
         ) -> Task<Success, Error> {
@@ -96,6 +103,7 @@ import Foundation
         /// of the current actor context and does not throw errors.
         /// - Parameter operation: An asynchronous operation to execute within the task.
         /// - Returns: A `Task` object that wraps the result of the operation.
+        @discardableResult
         func detached<Success: Sendable>(
             @_inheritActorContext operation: sending @escaping @isolated(any) () async -> Success
         ) -> Task<Success, Never> {
