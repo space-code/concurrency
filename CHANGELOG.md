@@ -12,7 +12,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `0.0.x` Releases - [0.0.3](#003) | [0.0.2](#002) | [0.0.1](#001)
 
 ---
+## [Unreleased]
 
+### Refactor
+- Mark methods with @discardableResult to silence unused result warnings
+  - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#23](https://github.com/space-code/concurrency/pull/23).
 
 ## [0.3.0](https://github.com/space-code/concurrency/releases/tag/0.3.0)
 
@@ -71,6 +75,7 @@ Released on 2024-12-25. All issues associated with this milestone can be found u
 - Bump the Swift version to 6.0
   - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#1](https://github.com/space-code/concurrency/pull/1).
 
+[unreleased]: https://github.com/space-code/concurrency/compare/0.3.0..HEAD
 [0.3.0]: https://github.com/space-code/concurrency/compare/0.2.0..0.3.0
 [0.2.0]: https://github.com/space-code/concurrency/compare/0.1.0..0.2.0
 [0.1.0]: https://github.com/space-code/concurrency/compare/0.0.3..0.1.0
