@@ -6,13 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 #### 0.x Releases
-- `0.3.x` Releases - [0.3.0](#030)
+- `0.3.x` Releases - [0.3.1](#031) | [0.3.0](#030)
 - `0.2.x` Releases - [0.2.0](#020)
 - `0.1.x` Releases - [0.1.0](#010)
 - `0.0.x` Releases - [0.0.3](#003) | [0.0.2](#002) | [0.0.1](#001)
 
 ---
-## [Unreleased]
+
+
+## [0.3.1](https://github.com/space-code/concurrency/releases/tag/0.3.1)
+
+Released on 2025-12-22. All issues associated with this milestone can be found using this [filter](https://github.com/space-code/concurrency/milestones?state=closed&q=0.3.1).
 
 ### Miscellaneous Tasks
 - Add sortImports and sortSwitchCases rules
@@ -79,7 +83,7 @@ Released on 2024-12-25. All issues associated with this milestone can be found u
 - Bump the Swift version to 6.0
   - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#1](https://github.com/space-code/concurrency/pull/1).
 
-[unreleased]: https://github.com/space-code/concurrency/compare/0.3.0..HEAD
+[0.3.1]: https://github.com/space-code/concurrency/compare/0.3.0..0.3.1
 [0.3.0]: https://github.com/space-code/concurrency/compare/0.2.0..0.3.0
 [0.2.0]: https://github.com/space-code/concurrency/compare/0.1.0..0.2.0
 [0.1.0]: https://github.com/space-code/concurrency/compare/0.0.3..0.1.0
