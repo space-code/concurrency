@@ -8,23 +8,23 @@ import Foundation
 // MARK: - IDispatchQueue
 
 public protocol IDispatchQueue: AnyObject {
-    ///
-    /// Submits a work item to a dispatch queue for asynchronous execution after
-    /// a specified time.
-    ///
-    /// - parameter: deadline the time after which the work item should be executed,
-    /// given as a `DispatchTime`.
-    /// - parameter qos: the QoS at which the work item should be executed.
-    ///    Defaults to `DispatchQoS.unspecified`.
-    /// - parameter flags: flags that control the execution environment of the
-    /// work item.
-    /// - parameter execute: The work item to be invoked on the queue.
-    /// - SeeAlso: `async(execute:)`
-    /// - SeeAlso: `asyncAfter(deadline:execute:)`
-    /// - SeeAlso: `DispatchQoS`
-    /// - SeeAlso: `DispatchWorkItemFlags`
-    /// - SeeAlso: `DispatchTime`
-    ///
+    //
+    // Submits a work item to a dispatch queue for asynchronous execution after
+    // a specified time.
+    //
+    // - parameter: deadline the time after which the work item should be executed,
+    // given as a `DispatchTime`.
+    // - parameter qos: the QoS at which the work item should be executed.
+    //    Defaults to `DispatchQoS.unspecified`.
+    // - parameter flags: flags that control the execution environment of the
+    // work item.
+    // - parameter execute: The work item to be invoked on the queue.
+    // - SeeAlso: `async(execute:)`
+    // - SeeAlso: `asyncAfter(deadline:execute:)`
+    // - SeeAlso: `DispatchQoS`
+    // - SeeAlso: `DispatchWorkItemFlags`
+    // - SeeAlso: `DispatchTime`
+    //
     #if swift(>=5.9)
         func asyncAfter(
             deadline: DispatchTime,
@@ -40,21 +40,21 @@ public protocol IDispatchQueue: AnyObject {
             execute work: @escaping @convention(block) () -> Void
         )
     #endif
-    ///
-    /// Submits a work item to a dispatch queue and optionally associates it with a
-    /// dispatch group. The dispatch group may be used to wait for the completion
-    /// of the work items it references.
-    ///
-    /// - parameter flags: flags that control the execution environment of the
-    /// - parameter qos: the QoS at which the work item should be executed.
-    ///    Defaults to `DispatchQoS.unspecified`.
-    /// - parameter flags: flags that control the execution environment of the
-    /// work item.
-    /// - parameter execute: The work item to be invoked on the queue.
-    /// - SeeAlso: `sync(execute:)`
-    /// - SeeAlso: `DispatchQoS`
-    /// - SeeAlso: `DispatchWorkItemFlags`
-    ///
+    //
+    // Submits a work item to a dispatch queue and optionally associates it with a
+    // dispatch group. The dispatch group may be used to wait for the completion
+    // of the work items it references.
+    //
+    // - parameter flags: flags that control the execution environment of the
+    // - parameter qos: the QoS at which the work item should be executed.
+    //    Defaults to `DispatchQoS.unspecified`.
+    // - parameter flags: flags that control the execution environment of the
+    // work item.
+    // - parameter execute: The work item to be invoked on the queue.
+    // - SeeAlso: `sync(execute:)`
+    // - SeeAlso: `DispatchQoS`
+    // - SeeAlso: `DispatchWorkItemFlags`
+    //
     #if swift(>=5.9)
         func async(
             qos: DispatchQoS,
