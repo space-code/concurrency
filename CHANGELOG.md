@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `0.0.x` Releases - [0.0.3](#003) | [0.0.2](#002) | [0.0.1](#001)
 
 ---
+<!-- git-cliff: end of header -->
 ## [Unreleased]
 
 ### Miscellaneous Tasks
