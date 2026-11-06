@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <!-- git-cliff: end of header -->
 ## [Unreleased]
 
+### Features
+- Add TypedTask to keep the error type of a task
+  - Implemented by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#59](https://github.com/space-code/concurrency/pull/59).
+
 ### Miscellaneous Tasks
 - Update simulator version in CI
   - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#45](https://github.com/space-code/concurrency/pull/45).
