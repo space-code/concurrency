@@ -6,6 +6,8 @@
 // MARK: - ITask
 
 #if swift(>=6.0)
+    import Concurrency
+
     /// A protocol representing a task that can be awaited until its execution completes.
     protocol ITask {
         /// Waits for the `Task` to complete by retrieving its result.
@@ -16,6 +18,15 @@
 
     /// Extends the `Task` type to conform to the `ITask` protocol.
     extension Task: ITask {
+        func wait() async {
+            _ = await result
+        }
+    }
+
+    // MARK: - TypedTask + ITask
+
+    /// Extends the `TypedTask` type to conform to the `ITask` protocol.
+    extension TypedTask: ITask {
         func wait() async {
             _ = await result
         }

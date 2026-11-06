@@ -19,6 +19,6 @@ let package = Package(
     targets: [
         .target(name: "Concurrency", dependencies: []),
         .target(name: "TestConcurrency", dependencies: ["Concurrency"]),
-        .testTarget(name: "ConcurrencyTests", dependencies: ["Concurrency"]),
+        .testTarget(name: "ConcurrencyTests", dependencies: ["Concurrency", "TestConcurrency"]),
     ]
 )

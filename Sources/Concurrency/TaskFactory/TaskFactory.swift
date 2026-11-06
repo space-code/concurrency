@@ -42,5 +42,21 @@
         ) -> Task<Success, Never> {
             Task.detached(priority: priority, operation: operation)
         }
+
+        @discardableResult
+        public func typedTask<Success: Sendable, Failure: Error>(
+            priority: TaskPriority?,
+            @_inheritActorContext operation: sending @escaping @isolated(any) () async throws(Failure) -> Success
+        ) -> TypedTask<Success, Failure> {
+            TypedTask(priority: priority, operation: operation)
+        }
+
+        @discardableResult
+        public func typedDetached<Success: Sendable, Failure: Error>(
+            priority: TaskPriority?,
+            @_inheritActorContext operation: sending @escaping @isolated(any) () async throws(Failure) -> Success
+        ) -> TypedTask<Success, Failure> {
+            TypedTask.detached(priority: priority, operation: operation)
+        }
     }
 #endif
