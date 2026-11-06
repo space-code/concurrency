@@ -16,6 +16,7 @@
 
 ## Features
 ✨ **Type-Safe Queue Abstractions** - Clean interfaces for main, global, and custom queues  
+🧵 **Typed Task Failures** - `TypedTask` keeps the error type of a `throws(Failure)` operation  
 🧪 **Built for Testing** - Comes with dedicated test doubles for unit testing  
 ⚡ **Lightweight** - Minimal wrapper around GCD with zero overhead  
 🎯 **Protocol-Based** - Easy to mock and inject dependencies  
@@ -31,6 +32,8 @@
   - [Main Queue](#main-queue)
   - [Global Queue](#global-queue)
   - [Private Queue](#private-queue)
+  - [Task Factory](#task-factory)
+  - [Typed Task](#typed-task)
   - [Testing](#testing)
 - [Communication](#communication)
 - [Contributing](#contributing)
@@ -202,6 +205,41 @@ class NetworkManager {
 - `attributes` - .concurrent for concurrent execution, empty for serial  
 - `autoreleaseFrequency` - Memory management strategy  
 - `target` - Queue to execute blocks on (advanced usage)  
+
+### Task Factory
+
+`ITaskFactory` creates Swift concurrency tasks, so code that starts a task can be given a test double:
+
+```swift
+import Concurrency
+
+let factory: ITaskFactory = TaskFactory()
+
+factory.task { await refresh() }                // tied to the current actor
+factory.detached { try await export() }         // detached from it
+```
+
+### Typed Task
+
+A `Task` created by the standard library only fails with `Never` or `any Error`, so the error type of an operation that
+`throws(NetworkError)` is lost. `typedTask` and `typedDetached` return a `TypedTask`, which keeps it:
+
+```swift
+let task = factory.typedTask { () async throws(NetworkError) -> User in
+    try await client.loadUser()
+}
+
+do throws(NetworkError) {
+    let user = try await task.value
+} catch {
+    // `error` is a `NetworkError`, no cast is needed.
+}
+
+let result: Result<User, NetworkError> = await task.result
+```
+
+`TypedTask` is `Hashable` like `Task`, can be cancelled with `cancel()`, and `TestTaskFactory` waits for it in
+`waitUntilIdle()` like it does for the other tasks.
 
 ## Testing
 

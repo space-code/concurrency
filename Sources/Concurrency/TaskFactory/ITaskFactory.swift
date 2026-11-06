@@ -62,6 +62,30 @@ import Foundation
             priority: TaskPriority?,
             @_inheritActorContext operation: sending @escaping @isolated(any) () async -> Success
         ) -> Task<Success, Never>
+
+        /// Creates a task tied to the current actor context whose operation fails with a specific type of error.
+        /// - Parameters:
+        ///   - priority: The priority of the task (optional).
+        ///   - operation: An asynchronous operation to execute within the task. The operation
+        ///     inherits the current actor context and is isolated to that actor.
+        /// - Returns: A ``TypedTask`` that keeps the type of the error of the operation.
+        @discardableResult
+        func typedTask<Success: Sendable, Failure: Error>(
+            priority: TaskPriority?,
+            @_inheritActorContext operation: sending @escaping @isolated(any) () async throws(Failure) -> Success
+        ) -> TypedTask<Success, Failure>
+
+        /// Creates a detached task whose operation fails with a specific type of error.
+        /// - Parameters:
+        ///   - priority: The priority of the task (optional).
+        ///   - operation: An asynchronous operation to execute within the task. The operation
+        ///     is isolated and does not inherit the current actor context.
+        /// - Returns: A ``TypedTask`` that keeps the type of the error of the operation.
+        @discardableResult
+        func typedDetached<Success: Sendable, Failure: Error>(
+            priority: TaskPriority?,
+            @_inheritActorContext operation: sending @escaping @isolated(any) () async throws(Failure) -> Success
+        ) -> TypedTask<Success, Failure>
     }
 
     /// Default implementations for the `ITaskFactory` protocol.
@@ -108,6 +132,27 @@ import Foundation
             @_inheritActorContext operation: sending @escaping @isolated(any) () async -> Success
         ) -> Task<Success, Never> {
             detached(priority: nil, operation: operation)
+        }
+
+        /// Creates a task tied to the current actor context with a default priority whose operation
+        /// fails with a specific type of error.
+        /// - Parameter operation: An asynchronous operation to execute within the task.
+        /// - Returns: A ``TypedTask`` that keeps the type of the error of the operation.
+        @discardableResult
+        func typedTask<Success: Sendable, Failure: Error>(
+            @_inheritActorContext operation: sending @escaping @isolated(any) () async throws(Failure) -> Success
+        ) -> TypedTask<Success, Failure> {
+            typedTask(priority: nil, operation: operation)
+        }
+
+        /// Creates a detached task with a default priority whose operation fails with a specific type of error.
+        /// - Parameter operation: An asynchronous operation to execute within the task.
+        /// - Returns: A ``TypedTask`` that keeps the type of the error of the operation.
+        @discardableResult
+        func typedDetached<Success: Sendable, Failure: Error>(
+            @_inheritActorContext operation: sending @escaping @isolated(any) () async throws(Failure) -> Success
+        ) -> TypedTask<Success, Failure> {
+            typedDetached(priority: nil, operation: operation)
         }
     }
 #endif
