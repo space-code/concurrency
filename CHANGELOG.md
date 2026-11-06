@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 #### 0.x Releases
+- `0.4.x` Releases - [0.4.0](#040)
 - `0.3.x` Releases - [0.3.1](#031) | [0.3.0](#030)
 - `0.2.x` Releases - [0.2.0](#020)
 - `0.1.x` Releases - [0.1.0](#010)
@@ -13,7 +14,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 <!-- git-cliff: end of header -->
-## [Unreleased]
+
+
+## [0.4.0](https://github.com/space-code/concurrency/releases/tag/0.4.0)
+
+Released on 2026-11-06. All issues associated with this milestone can be found using this [filter](https://github.com/space-code/concurrency/milestones?state=closed&q=0.4.0).
 
 ### Features
 - Add TypedTask to keep the error type of a task
@@ -94,7 +99,7 @@ Released on 2024-12-25. All issues associated with this milestone can be found u
 - Bump the Swift version to 6.0
   - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#1](https://github.com/space-code/concurrency/pull/1).
 
-[unreleased]: https://github.com/space-code/concurrency/compare/0.3.1..HEAD
+[0.4.0]: https://github.com/space-code/concurrency/compare/0.3.1..0.4.0
 [0.3.1]: https://github.com/space-code/concurrency/compare/0.3.0..0.3.1
 [0.3.0]: https://github.com/space-code/concurrency/compare/0.2.0..0.3.0
 [0.2.0]: https://github.com/space-code/concurrency/compare/0.1.0..0.2.0

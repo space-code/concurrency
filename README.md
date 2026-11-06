@@ -61,7 +61,7 @@ Add the following dependency to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/space-code/concurrency.git", from: "0.3.1")
+    .package(url: "https://github.com/space-code/concurrency.git", from: "0.4.0")
 ]
 ```
 
